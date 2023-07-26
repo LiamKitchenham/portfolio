@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Liam Kitchenham">
+    <script src="script.js" defer></script>
+    <title>Developer Portfolio</title>
+</head>
+<header class="header">
+    <h1 class="portfolio__h1">Portfolio</h1>
+    <a href="#" class="togglebtn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <nav class="navbar">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+    </nav>
+</header>
+<main>
+    <section>
+        <article class="article__contact">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="img/email.png" alt="myemail" width="100" height="100"></span>
+                            <span>liam.kitchenham@aol.co.uk</span>
+                        </li>
+                        <li>
+                            <span><img src="img/phone.png" alt="phone number" width="100" height="100"></span>
+                            <!--   <span>07539640063</span> -->
+                            <a href="tel:07539640063">07539640063</a>
+                        </li>
+                    </ul>
+                    <ul class="list">
+                        <li class="li"><a href="https://github.com/LiamKitchenham?tab=repositories" target="_blank"><img
+                                    class="github__logo" src="img/github-mark.png" alt="my github link" height="50"
+                                    width="50"></a></li>
+                        <li class="li"> <a href="https://www.linkedin.com/in/liam-kitchenham-51b845277/"
+                                target="_blank"><img class="linkedin__logo" src="img/LinkedIn_logo_initials.png"
+                                    alt="linkedin profile link" height="50" width="50"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contactform">
+                <h2>Send a Message</h2>
+                <div class="formbox">
+                    <div class="inputbox w50">
+                        <input type="text" required id="firstname">
+                        <span>First Name</span>
+                    </div>
+                    <div class="inputbox w50">
+                        <input type="text" required id="lastname">
+                        <span>Last Name</span>
+                    </div>
+                    <div class="inputbox w50">
+                        <input type="email" required id="useremail">
+                        <span>Email Address</span>
+                    </div>
+                    <div class="inputbox w50">
+                        <input type="email" required id="usernumber">
+                        <span>Mobile Number</span>
+                    </div>
+                    <div class="inputbox w100">
+                        <textarea id="message" required></textarea>
+                        <span>Write your message here...</span>
+                    </div>
+                    <!-- <div class="inputbox w100">
+                        <input type="submit" value="send">
+                    </div> -->
+                    <button type="submit" class="submit-btn">Send</button>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+<footer>
+
+</footer>
+
+</html>

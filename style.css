@@ -1,0 +1,562 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --BGCOLOR: #001f3f;
+}
+
+body {
+  /*   overflow-x: hidden; */
+  width: 100%;
+  background: #001f3f;
+  color: #ededed;
+}
+
+/* || Header */
+.header {
+  background-color: #001f3f;
+  /* position: fixed; */
+  position: sticky; /* worked!! stoped body going behind navabr in mobile view */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.portfolio__h1 {
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* || Navbar */
+
+.navbar a {
+  font-size: 18px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  box-shadow: inset 100px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.togglebtn {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.togglebtn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 400px) {
+  .togglebtn {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar a {
+    display: flex;
+  }
+  .navbar.active {
+    display: flex;
+  }
+}
+@media (max-width: 632px) {
+  .togglebtn {
+    display: flex;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .navbar a {
+    display: flex;
+  }
+  .navbar.active {
+    display: flex;
+  }
+}
+
+/* INDEX */
+
+/* || Main */
+
+.main {
+  max-height: 100vh; /* Review these min and max as might be causing too much space on bottom of page in ipad view */
+  min-height: 300px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  width: 100%;
+  justify-content: center;
+}
+
+.main__content {
+  /*  background: yellow; */
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.main__content h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.main__content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #54b3d6;
+}
+
+.main__content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.main__content .button__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__box a {
+  margin: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: #54b3d6;
+  border: 2px solid #54b3d6;
+  border-radius: 8px;
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.button__box a:hover {
+  color: black;
+}
+
+/* Main image */
+
+.bg__image {
+  display: flex;
+  width: 90%;
+  height: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #001f3f;
+  border-radius: 50%;
+}
+
+@media (max-width: 550px) {
+  .main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main__content {
+    width: 100%;
+    height: auto;
+  }
+  .bg__image {
+    width: 100%;
+    max-height: 200px;
+    flex-direction: row;
+  }
+}
+
+/* || About */
+
+/* Personal */
+.personal {
+  overflow-wrap: break-word;
+  /*  hyphens: auto; */
+  border: 2px solid white;
+  margin-left: 15%;
+  padding: 5%;
+  text-align: center;
+  width: 70%;
+  justify-content: center;
+}
+
+.personal__h2 {
+  color: white;
+  font-size: 45px;
+  font-weight: 1000;
+}
+
+.personal p {
+  font-size: 16px;
+  font-weight: 1000;
+  color: white;
+}
+
+/* SKILLS */
+
+.skills {
+  margin-top: 10px;
+  text-align: center;
+  border: 2px solid whitesmoke;
+  padding: 5%;
+}
+
+.skills p {
+  font-weight: 600;
+}
+
+.skills__h2 {
+  font-size: 34px;
+  font-weight: 1000;
+}
+
+.education {
+  margin-top: 10px;
+  width: 50%;
+  margin-left: 25%;
+  border: 2px solid whitesmoke;
+  border-radius: 15px;
+  padding: 1rem;
+  /*   display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+}
+
+.education__h2 {
+  text-align: center;
+  font-size: 34px;
+}
+
+.education__ul {
+  display: inline-block;
+  list-style-type: none;
+}
+.education__ul li::before {
+  content: "✓";
+  color: blue;
+  border: 1px solid;
+}
+
+/* || Footer */
+
+footer p {
+  text-align: center;
+  justify-content: center;
+  /*  display: flex; */
+}
+
+.list {
+  padding-left: 10%;
+  display: inline-flex;
+  list-style-type: none;
+  /* justify-content: space-between; */
+}
+
+.li {
+  margin-right: 20%;
+  /* display: inline-flex;
+  list-style-type: none; */
+}
+
+/* || Contact Page  */
+
+.article__contact {
+  position: relative;
+  width: auto;
+  min-height: 500px;
+  display: flex;
+  z-index: 1;
+  border: 2px solid white; /* maybe remove? */
+}
+
+.article__contact .contactinfo {
+  position: absolute;
+  width: 350px;
+  top: 40px;
+  height: calc(100% - 80px);
+  background: white;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 15);
+}
+
+.article__contact .contactinfo h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.article__contact .contactinfo ul.info {
+  position: relative;
+  margin: 20px 0;
+  color: black;
+  font-weight: 600;
+}
+.article__contact .contactinfo ul.info li {
+  position: relative;
+  list-style: none;
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: flex-start;
+  font-weight: 600;
+}
+.article__contact .contactinfo ul.info span :nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+}
+
+.article__contact .formbox .contactform {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  /*   background-color: rebeccapurple; */
+}
+
+.article__contact .contactform h2 {
+  font-size: 24px;
+  font-weight: 1000;
+}
+
+.article__contact .contactform .formbox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.article__contact .contactform .formbox .inputbox {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.article__contact .contactform .formbox .inputbox.w50 {
+  width: 47%;
+}
+
+.article__contact .contactform .formbox .inputbox.w100 {
+  width: 100%;
+}
+
+.article__contact .contactform .formbox .inputbox input,
+.article__contact .contactform .formbox .inputbox textarea {
+  width: 100%;
+}
+
+.submit-btn {
+  border: 2px solid white;
+  background-color: var(--BGCOLOR);
+  cursor: pointer;
+  width: 100%;
+  padding: 0.8rem;
+  color: white;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.submit-btn:hover {
+  background-color: #54b3d6;
+}
+
+@media (max-width: 2000px) {
+  .article__contact {
+    width: 90%;
+    min-width: auto;
+    margin: 20px;
+  }
+
+  .article__contact .contactinfo {
+    top: 0;
+    height: 500px;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .article__contact.contactform {
+    position: relative;
+    width: calc(100% - 350px);
+    padding: 40px;
+    height: 550px;
+  }
+  /*   .article__contact.contactform button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.8rem;
+    color: white;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  } */
+}
+
+@media (max-width: 991px) {
+  section::before {
+    display: none;
+  }
+  .article__contact {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .article__contact .contactform {
+    width: 100%;
+    height: auto;
+  }
+  .article__contact .contactinfo {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 600px) {
+  .article__contact .contactform {
+    padding: 25px;
+  }
+  .article__contact .contactinfo {
+    padding: 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .article__contact .contactform.formbox.w50 {
+    width: 100%;
+  }
+}
+
+/* || Portfolio */
+
+.project__taco {
+  overflow-wrap: break-word;
+  width: 75%;
+  /*   min-height: 500px; */
+  margin-left: 12%;
+  border: 2px solid white;
+  text-align: center;
+}
+
+.project__taco__h2 {
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 2%;
+  font-weight: 1000;
+}
+
+.project__taco p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.project__taco__div img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+}
+
+.project__insure {
+  overflow-wrap: break-word;
+  border: 2px solid white;
+  text-align: center;
+  width: 50%;
+  /*  min-height: 500px; */
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+.project__insureh2 {
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 2%;
+  font-weight: 1000;
+}
+
+.project__insure p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.project__insurediv img {
+  position: relative;
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 402px) {
+  .project__taco__h2 {
+    font-size: 16px;
+    font-weight: 1000;
+  }
+  .project__taco p {
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .project__insureh2 {
+    font-size: 16px;
+    font-weight: 1000;
+  }
+
+  .project__insure p {
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .project__insurediv img {
+    width: 100%;
+    height: auto;
+  }
+}
